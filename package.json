@@ -1,0 +1,22 @@
+{
+  "name": "marvel",
+  "version": "1.0.0",
+  "description": "Technical test for the Grability frontend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yunerkis/marvel.git"
+  },
+  "author": "Yunerkis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yunerkis/marvel/issues"
+  },
+  "homepage": "https://github.com/yunerkis/marvel#readme",
+  "dependencies": {
+    "angular": "^1.6.2"
+  }
+}
