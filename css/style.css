@@ -25,3 +25,15 @@
   border-radius: 4px;
   background: white url('../img/search.png') right no-repeat;
 }
+/*End Style*/
+
+.container-fluid{
+  background-color: #ececec;
+
+}
+
+/*Style for the details of the characters*/
+h3 {
+  display: inline-block;
+  font-weight: bold;
+}
