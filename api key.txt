@@ -1,0 +1,7 @@
+59e7519bf8b3d2546d15e89e60dabc44
+
+http://gateway.marvel.com/v1/public/characters?apikey=59e7519bf8b3d2546d15e89e60dabc44
+
+c10701e18d799cb4c173319e21864b6358411190
+
+https://github.com/accetone/ng-pagination
