@@ -50,9 +50,8 @@
               </div>
               <div class="description-comic">
                 <div class="col-xs-6" dir-paginate="comic in hero.comics.items | itemsPerPage: 4">
-                  <img src="img/link-arrow.png" alt="" ng-show='comic.focus' class="img-responsive">
-                  <a href="" title="" data-toggle="modal" data-target="#modal-marvel" ng-mouseleave='comic.focus=false' ng-mouseover='comic.focus=true' ng-click="select_comic(comic)">
-                    <p class="truncate-p" >{{comic.name}}</p>
+                  <a href="" title="" data-toggle="modal" data-target="#modal-marvel">
+                    <p class="truncate-p arrow" >{{comic.name}}</p>
                   </a>
                 </div>
               </div>
