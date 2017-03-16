@@ -52,6 +52,28 @@ Hero_List.config(function(paginationTemplateProvider) {
     }, function errorCallback(response) {
     });
   }
+  if (typeof(localStorage["favourites"])=="undefined") {
+      $scope.favourites = [];
+      localStorage["favourites"] = "[]";
+  }else {
+      $scope.favourites = JSON.parse(localStorage["favourites"]); 
+  }
+  $scope.add_favourite = function () {
+    var compare = $scope.favourites.filter(function(item) {
+      return $scope.comic.id === item.id;
+    });
+    if (compare.length === 0) {
+      $scope.favourites.push($scope.comic)
+      console.log($scope.comic)
+      localStorage["favourites"] = JSON.stringify($scope.favourites);
+    }
+  }
+  $scope.remove_favourite = function (favourite) {
+    $scope.favourites = $scope.favourites.filter(function(item) {
+      return favourite.id !== item.id;
+    });
+    localStorage["favourites"] = JSON.stringify($scope.favourites);
+  }
   $scope.select_comic = function (comic) {
     $http({
       method: 'GET',
@@ -60,7 +82,6 @@ Hero_List.config(function(paginationTemplateProvider) {
         apikey: "59e7519bf8b3d2546d15e89e60dabc44",
       }
     }).then(function successCallback(response) {
-      console.log(response.data.data.results)
       $scope.comic = response.data.data.results[0]
     }, function errorCallback(response) {
     });
@@ -74,7 +95,6 @@ Hero_List.config(function(paginationTemplateProvider) {
     }
   }).then(function successCallback(response) {
     $scope.heros = response.data.data.results
-    console.log($scope.heros)
   }, function errorCallback(response) {
   });
 });
