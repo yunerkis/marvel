@@ -1,7 +1,3 @@
-document.getElementById('part-one').addEventListener('DOMSubtreeModified', function () {
-  $('#part-two').height($('#part-one').height());
-}, false);
-
 var Hero_List = angular.module("Hero_List", []);
 
 Hero_List.controller('List', function($scope, $http) {
@@ -26,3 +22,6 @@ Hero_List.controller('List', function($scope, $http) {
   });
 });
 
+document.getElementById('part-one').addEventListener('DOMSubtreeModified', function () {
+  $('#part-two').height($('#part-one').height());
+}, false);

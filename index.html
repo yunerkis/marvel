@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
-  <body ng-app="Hero_List" ng-controller="List">
+  <body ng-app="Hero_List" ng-controller="List" >
     <!-- Static navbar -->
     <div class="nav-marvel">
       <div class="col-xs-3">
@@ -20,7 +20,7 @@
     </div>
     <div class="container-fluid">
       <div class="row">
-        <div class="col-xs-8 col-md-9" id="part-one" ng-change="realize()">
+        <div class="col-xs-8 col-md-9" id="part-one">
           <div class="col-xs-12 margin-sep">
             <div class="col-xs-8">
               <img src="img/characters.png" alt="" class="center-img">
@@ -39,9 +39,9 @@
                 <img src="{{hero.thumbnail.path}}.{{hero.thumbnail.extension}}" alt="" class="img-circle img-responsive img-hero">
               </div>
               <div class="col-xs-6">
-                <h4 >{{hero.name}}</h4>
+                <h4 class="truncate" >{{hero.name}}</h4>
                 <p class="descrption">{{hero.description}}</p>
-                <button class="btn btn-marvel">View More</button>
+                <button class="btn btn-marvel" data-toggle="modal" data-target="#modal-marvel">View More</button>
               </div>
               <div class="col-xs-12">
                 <h4 class="truncate-p">Related Comics</h4>
@@ -62,7 +62,7 @@
               <ul class="pagination">
                 <li>
                   <a href="#" aria-label="Previous">
-                    <span aria-hidden="true">&laquo;</span>
+                    <span aria-hidden="true"><img src="img/btn_arrow_left.png" alt="" style="height: 20px;"></span>
                   </a>
                 </li>
                 <li><a href="#">1</a></li>
@@ -72,7 +72,7 @@
                 <li><a href="#">5</a></li>
                 <li>
                   <a href="#" aria-label="Next">
-                    <span aria-hidden="true">&raquo;</span>
+                    <span aria-hidden="true"><img src="img/btn_arrow_right.png" alt="" style="height: 20px;"></span>
                   </a>
                 </li>
               </ul>
@@ -99,9 +99,36 @@
         <!---->
       </div>
     </div>
+    <!--Modal-->
+    <div class="modal fade" id="modal-marvel" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true"><img src="img/btn-close.png" alt="" style="height: 20px;"></span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-xs-5">
+                <img src="https://i.annihil.us/u/prod/marvel/i/mg/e/e0/537bafa34baa9.jpg" alt="" class="img-two">
+              </div>
+              <div class="col-xs-6">
+              <h4 class="title">Aqui va el titulo del comic, bien lindo</h4>
+                <p>Marvel Worldwide, Inc. es una editorial de cómics estadounidense creada en 1939, inicialmente con el nombre de Timely Comics. Entre sus personajes emblemáticos del género superheroico se encuentran Spider-Man, Capitán América, Iron Man, Hulk, Thor, Deadpool, Avengers, Wolverine, Daredevil, y los X-Men, entre otros.</p>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--End Modal-->
     <footer>
       <div class="footer-div">Grability 2016 - Todos los derechos reservados <img src="img/grability-logo.png" alt="" class="center-img" style="float: right;"></div>
-      
     </footer>
     <script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
     <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
