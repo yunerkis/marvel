@@ -1,28 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Marvel Challenge</title>
     <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body ng-app="Hero_List" ng-controller="List">
-
     <!-- Static navbar -->
     <div class="nav-marvel">
-      <div class="row">
-        <div class="col-xs-3">
-          <div class="nav-img">
-            <img src="img/Marvel_-_Logo.svg" alt="">
-          </div>
-        </div>
-        <div class="col-xs-6">
-          <input type="text" name="search" id="search" ng-model="filter" placeholder="Search Character...">
+      <div class="col-xs-3">
+        <div class="nav-img">
+          <img src="img/Marvel_-_Logo.svg" alt="">
         </div>
       </div>
+      <div class="col-xs-6">
+        <input type="text" name="search" id="search" ng-model="filter" placeholder="Search Character...">
+      </div>
     </div>
-    <div class="container-fluid" >
+    <div class="container-fluid">
       <div class="row">
-        <div class="col-xs-8 col-md-9">
+        <div class="col-xs-8 col-md-9" id="part-one" ng-change="realize()">
           <div class="col-xs-12 margin-sep">
             <div class="col-xs-8">
               <img src="img/characters.png" alt="" class="center-img">
@@ -34,7 +32,7 @@
               </select>
             </div>
           </div>
-          <div class="col-xs-12 col-md-6" ng-repeat="hero in heros | filter:filter">
+          <div class="col-xs-12 col-md-6" ng-repeat="hero in heros | filter:filter" style="margin-top: 30px;">
             <div class="card-hero"></div>
             <div class="">
               <div class="col-xs-6 static-img">
@@ -42,29 +40,25 @@
               </div>
               <div class="col-xs-6">
                 <h4 >{{hero.name}}</h4>
-                <h5>{{hero.description}}</h5>
+                <p class="descrption">{{hero.description}}</p>
                 <button class="btn btn-marvel">View More</button>
               </div>
               <div class="col-xs-12">
-                <h4>Related Comics</h4>
+                <h4 class="truncate-p">Related Comics</h4>
               </div>
               <div class="col-xs-6">
-                <h5></h5>
+                <p class="truncate-p">El hombre araña contra Yisus</p>
+                <p class="truncate-p">El hombre araña contra Yisus</p>
               </div>
               <div class="col-xs-6">
-                <h5></h5>
-              </div>
-              <div class="col-xs-6">
-                <h5></h5>
-              </div>
-              <div class="col-xs-6">
-                <h5></h5>
+                <p class="truncate-p">El hombre araña contra Yisus</p>
+                <p class="truncate-p">El hombre araña contra Yisus</p>
               </div>
             </div>
           </div>
           <!--Paginador-->
           <div class="col-xs-12">
-            <nav aria-label="Page navigation">
+            <nav aria-label="Page navigation" style="text-align: center">
               <ul class="pagination">
                 <li>
                   <a href="#" aria-label="Previous">
@@ -87,7 +81,7 @@
           <!---->
         </div>
         <!--Parte Gris-->
-        <div class="col-xs-4 col-md-3 color-side clearfix">
+        <div class="col-xs-4 col-md-3 color-side" id="part-two">
           <div class="text-center">
             <img src="img/favourites.png" alt="" class="center-img">
             <h3>My Favourites</h3>
@@ -96,18 +90,19 @@
             <input type=image src="img/btn-delete.png" alt="">
           </div>
           <div class="side-two">
-            <div>
-              <img src="https://i.annihil.us/u/prod/marvel/i/mg/e/e0/537bafa34baa9.jpg" alt="" class="img-two">
-            </div>
+            <img src="https://i.annihil.us/u/prod/marvel/i/mg/e/e0/537bafa34baa9.jpg" alt="" class="img-two">
             <div class="text-center">
-            <h4>Aqui va el titulo del comic, bien lindo</h4>
-          </div>
+              <h4>Aqui va el titulo del comic, bien lindo</h4>
+            </div>
           </div>
         </div>
         <!---->
       </div>
     </div>
-    <script type="text/javascript" src="node_modules/js-md5/build/md5.min.js"></script>
+    <footer>
+      <div class="footer-div">Grability 2016 - Todos los derechos reservados <img src="img/grability-logo.png" alt="" class="center-img" style="float: right;"></div>
+      
+    </footer>
     <script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
     <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
