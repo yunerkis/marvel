@@ -1,0 +1,19 @@
+# install node.js
+
+https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-an-ubuntu-14-04-server
+
+# install http-server
+
+$ sudo npm install -g http-server
+
+# open app folder and npm install
+
+$ npm install
+
+# run http-server
+
+$ http-server
+
+# open in :4
+
+http://127.0.0.1:8080
