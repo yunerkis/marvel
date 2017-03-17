@@ -87,7 +87,9 @@ padding: 4% 9%;
   padding-left: 20px;
   overflow: hidden;
   height: 40px;
-  text-align: justify;
+}
+.truncate-p:hover{
+  color: #d50000;
 }
 .arrow:hover::before{
   content: '';
@@ -96,6 +98,9 @@ padding: 4% 9%;
   color: red;
   background: url(../img/link-arrow.png) no-repeat;
   float: left;
+}
+a{
+  color:#817272;
 }
 .descrption{
 height: 120px;
@@ -141,6 +146,7 @@ height: 150px;
 .description-comic{
   height: 385px;
 }
+
 /*FIXTURE btn--------------------------------------------*/
 .btn{
   border-radius: 0px;
@@ -212,5 +218,37 @@ bottom: 0;
 }
 .modal-header {
   border-bottom: 0px solid #e5e5e5;
+}
+/*---------------------------------------------------------*/
+/*FIXTURE Buttons for modal--------------------------------*/
+.modal-btn{
+display: flex;
+width: 48.2%;
+margin-left: 15px;
+height: 75px;
+color: red;
+}
+.modal-btn-two{
+display: flex;
+width: 48.2%;
+height: 75px;
+}
+.conte{
+background: url(../img/favourites.png) no-repeat #393333 left 52px bottom 18px;
+content: '';
+margin-left: 15px;
+}
+.conte:hover{
+background: url(../img/btn-favourites-default.png) no-repeat #ECEFF1 left 52px bottom 18px;
+content: '';
+margin-left: 15px;
+}
+.conte-two{
+background: url(../img/shopping-cart-primary.png) no-repeat #DCDCDC left 52px bottom 18px;
+content: '';
+}
+.center-favourite {
+height: 54px;
+padding: 4px 32px 3px;
 }
 /*---------------------------------------------------------*/

@@ -50,7 +50,7 @@
               </div>
               <div class="description-comic">
                 <div class="col-xs-6" dir-paginate="comic in hero.comics.items | itemsPerPage: 4">
-                  <a href="" title="" data-toggle="modal" data-target="#modal-marvel">
+                  <a href="" title="" data-toggle="modal" data-target="#modal-marvel" ng-mouseleave='comic.focus=false' ng-mouseover='comic.focus=true' ng-click="select_comic(comic)">
                     <p class="truncate-p arrow" >{{comic.name}}</p>
                   </a>
                 </div>
@@ -104,11 +104,15 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-xs-6 btn" style="display:flex;" ng-click="add_favourite()">
-              <img src="img/favourites.png" alt="" class="center-img"><h4>ADDED TO FAVOURITES</h4>
+            <div class="col-xs-6 btn modal-btn conte" data-dismiss="modal"  style="display:flex;" ng-click="add_favourite()">
+              <div class="center-favourite"></div>
+              <h4 style="margin-top: 22px;
+              margin-left: 20px;">ADDED TO FAVOURITES</h4>
             </div>
-            <div class="col-xs-6 btn" style="display:flex;">
-              <input type=image src="img/shopping-cart-primary.png" alt="" class="center-img"><h4>BUY FOR ${{comic.prices[0].price}}</h4>
+            <div class="col-xs-6 btn modal-btn-two conte-two" style="display:flex;">
+              <div class="center-favourite"></div>
+              <h4 style="margin-top: 22px;
+              margin-left: 20px;">BUY FOR ${{comic.prices[0].price}}</h4>
             </div>
           </div>
         </div>
